@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Product</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1 class="store">store</h1>
+        <form class="search-bar">
+            <input type="text" placeholder="Search..." name="search">
+            <button type="submit">
+                <img src="https://cdn-icons-png.flaticon.com/512/51/51658.png" width="14" alt="search">
+            </button>
+        </form>
+    </header>
+    <div class="container mt-5">
+        <div class="form-container">
+            <h1>Add New Product</h1>
+
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="alert alert-warning">
+                        {% for message in messages %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <form method="POST" action="/add">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" rows="2" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="price">Price (USD)</label>
+                    <input type="number" step="0.01" name="price" id="price" required>
+                </div>
+                <div class="form-group">
+                    <label for="image">Image URL</label>
+                    <input type="text" name="image" id="image">
+                </div>
+                <div class="form-actions">
+                    <a href="{{ url_for('index') }}" class="btn-cancel">Cancel</a>
+                    <button type="submit" class="btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

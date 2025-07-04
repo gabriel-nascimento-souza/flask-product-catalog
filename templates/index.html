@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Marketplace</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<script>
+    document.querySelector('.search-bar').addEventListener('input', function (e) {
+        const search = e.target.value.toLowerCase();
+        document.querySelectorAll('.card').forEach(card => {
+            const title = card.querySelector('.card-title').textContent.toLowerCase();
+            const desc = card.querySelector('.card-text').textContent.toLowerCase();
+            if (title.includes(search) || desc.includes(search)) {
+                card.parentElement.style.display = '';
+            } else {
+                card.parentElement.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+<body>
+    <header>
+        <h1 class="store">store</h1>
+        <form class="search-bar">
+            <input type="text" placeholder="Search..." name="search">
+            <button type="submit">
+                <img src="https://cdn-icons-png.flaticon.com/512/51/51658.png" width="14" alt="search">
+            </button>
+        </form>
+    </header>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Product Listings</h1>
+        <a href="/add" class="btn btn-primary mb-4">Add New Product</a>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="alert alert-info">
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <div class="row">
+            {% for product in products %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="{{ product[4] }}" class="card-img-top" alt="{{ product[1] }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product[1] }}</h5>
+                        <p class="card-text">{{ product[2] }}</p>
+                        <p class="card-text"><strong>$ {{ product[3] }}</strong></p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="/edit/{{ product[0] }}" class="btn btn-warning">Edit</a>
+                        <a href="/delete/{{ product[0] }}" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+</body>
+
+</html>
