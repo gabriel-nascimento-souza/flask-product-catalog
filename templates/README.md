@@ -7,7 +7,8 @@
 **A dynamic product catalog using Flask, with database integration and a web interface.**
 
 <div align="center">
-<img src="screenshot.png" width="600" alt="Catalog Preview">
+<img src="<img width="1360" height="603" alt="landing-page" src="https://github.com/user-attachments/assets/d98f5aee-4a38-43a2-8003-51b9fc3f45a3" />
+" width="600" alt="Catalog Preview">
 </div>
 
 ## Features
