@@ -24,7 +24,7 @@
 |------------------|-----------------|----------------|
 | Python Flask | HTML5 | SQLite |
 | Flask-SQLAlchemy | CSS3 | |
-| Flask-WTForms | Bootstrap (?) | |
+| Flask-WTForms |
 
 ## How to Run Locally
 ```bash
