@@ -8,9 +8,9 @@
 **Product management system with complete CRUD and intuitive interface.**
 
 <div align="center"> 
-<img src="https://github.com/gabriel-nascimento-souza/flask-product-catalog/blob/main/prints/landing-page.png" width="35%" alt="Product List"> 
-<img src="https://github.com/gabriel-nascimento-souza/flask-product-catalog/blob/main/prints/add-product-page.png" width="35%" alt="Add Product"> 
-<img src="https://github.com/gabriel-nascimento-souza/flask-product-catalog/blob/main/prints/edit-product-page.png" width="35%" alt="Edit Product">
+<img src="https://github.com/gabriel-nascimento-souza/flask-product-catalog/blob/main/prints/landing-page.png" width="45%" alt="Product List"> 
+<img src="https://github.com/gabriel-nascimento-souza/flask-product-catalog/blob/main/prints/add-product-page.png" width="45%" alt="Add Product"> 
+<img src="https://github.com/gabriel-nascimento-souza/flask-product-catalog/blob/main/prints/edit-product-page.png" width="45%" alt="Edit Product">
 </div>
 
 ## Main Features
