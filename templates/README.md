@@ -2,29 +2,37 @@
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![Flask](https://img.shields.io/badge/Flask-2.3-lightgrey)
-![Status](https://img.shields.io/badge/Status-In%20Development-yellow)
+![SQLite](https://img.shields.io/badge/Database-SQLite-green)
+![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)
 
-**A dynamic product catalog using Flask, with database integration and a web interface.**
+**Product management system with complete CRUD and intuitive interface.**
 
-<div align="center">
-<img src="<img width="1360" height="603" alt="landing-page" src="https://github.com/user-attachments/assets/d98f5aee-4a38-43a2-8003-51b9fc3f45a3" />
-" width="600" alt="Catalog Preview">
+<div align="center"> 
+<img src="landing-page.png" width="45%" alt="Product List"> 
+<img src="add-product-page.png" width="45%" alt="Add Product"> 
+<img src="edit-product-page.png" width="45%" alt="Edit Product">
 </div>
 
-## Features
-- Product registration (name, price, category)
-- Grid or list view
-- Dynamic search and filters
-- Administrative panel (CRUD)
+## Main Features
+- **Add new products** (title, description, price, and image URL)
+- **Organized listing** of products (such as smartphones, TVs, and notebooks)
+- **Complete editing** of each item
+- **Secure deletion** of products
 
-## How to Run
-### Prerequisites
-- Python 3.10+
-- Flask 2.3+
+## Technologies Used
+| Back-end | Front-end | Database |
+|------------------|-----------------|----------------|
+| Python Flask | HTML5 | SQLite |
+| Flask-SQLAlchemy | CSS3 | |
+| Flask-WTForms | Bootstrap (?) | |
 
-### Installation
+## How to Run Locally
 ```bash
-git clone https://github.com/seu-usuario/flask-product-catalog.git
-cd flask-product-catalog
+# Clone the repository
+git clone https://github.com/your-user/flask-product-catalog.git
+
+# Install the dependencies
 pip install -r requirements.txt
+
+# Run the application
 flask run
